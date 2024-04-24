@@ -1,6 +1,8 @@
 ---
 name: ci-calculator-project-workflow
-on: [push]  # evento que fará essa action executar
+on:
+  pull_request:
+    branches: [development]  # eventos de pull request na branch development somente
 jobs:
   check-application:  # nome do job
     runs-on: ubuntu-latest  # imagem da action
